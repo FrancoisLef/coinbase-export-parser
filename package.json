@@ -40,11 +40,11 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "oclif": {
-    "bin": "cryport"
-  },
   "gitHooks": {
     "pre-commit": "sort-package-json",
     "commit-msg": "commitlint -e -V"
+  },
+  "oclif": {
+    "bin": "cryport"
   }
 }
