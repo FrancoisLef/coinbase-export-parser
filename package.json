@@ -1,0 +1,39 @@
+{
+  "name": "crypto-report",
+  "version": "0.0.0",
+  "homepage": "https://github.com/FrancoisLef/crypto-report",
+  "bugs": "https://github.com/FrancoisLef/crypto-report/issues",
+  "repository": "FrancoisLef/crypto-report",
+  "license": "MIT",
+  "author": "François Lefebvre @FrancoisLef",
+  "main": "src/index.js",
+  "bin": {
+    "cryport": "./bin/run"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "scripts": {
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "posttest": "eslint .",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "oclif": {
+    "bin": "cryport"
+  }
+}
