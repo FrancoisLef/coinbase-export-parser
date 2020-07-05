@@ -21,6 +21,9 @@
     "posttest": "eslint .",
     "version": "oclif-dev readme && git add README.md"
   },
+  "lint-staged": {
+    "*.js": "eslint ."
+  },
   "dependencies": {
     "@oclif/command": "^1.6.1",
     "@oclif/config": "^1.15.1",
