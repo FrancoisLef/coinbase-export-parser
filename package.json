@@ -17,12 +17,16 @@
   "scripts": {
     "lint": "eslint .",
     "prepack": "oclif-dev readme",
-    "test": "echo NO TESTS",
-    "posttest": "eslint .",
     "version": "oclif-dev readme && git add README.md"
+  },
+  "commitlint": {
+    "extends": "@droplt"
   },
   "lint-staged": {
     "*.js": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": "@droplt"
   },
   "dependencies": {
     "@oclif/command": "^1.6.1",
@@ -32,7 +36,8 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
+    "@droplt/commitlint-config": "^0.0.2",
+    "@droplt/eslint-config": "^0.0.2",
     "@oclif/dev-cli": "^1.22.2",
     "eslint": "^7.4.0",
     "eslint-config-oclif": "^3.1",
