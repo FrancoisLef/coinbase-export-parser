@@ -15,25 +15,36 @@
     "/src"
   ],
   "scripts": {
+    "lint": "eslint .",
     "prepack": "oclif-dev readme",
     "test": "echo NO TESTS",
     "posttest": "eslint .",
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-    "@oclif/command": "^1",
-    "@oclif/config": "^1",
-    "@oclif/plugin-help": "^3"
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/errors": "^1.2.2",
+    "@oclif/plugin-help": "^3.0.1"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1",
-    "eslint": "^5.13",
-    "eslint-config-oclif": "^3.1"
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@oclif/dev-cli": "^1.22.2",
+    "eslint": "^7.4.0",
+    "eslint-config-oclif": "^3.1",
+    "lint-staged": "^10.2.11",
+    "sort-package-json": "^1.44.0",
+    "yorkie": "^2.0.0"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "oclif": {
     "bin": "cryport"
+  },
+  "gitHooks": {
+    "pre-commit": "sort-package-json",
+    "commit-msg": "commitlint -e -V"
   }
 }
